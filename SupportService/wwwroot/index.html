@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Служба поддержки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Служба поддержки</h1>
+
+    <section id="loginSection">
+        <h2>Вход</h2>
+
+        <input id="username" type="text" placeholder="Логин" value="demo">
+        <input id="password" type="password" placeholder="Пароль" value="demo">
+
+        <button onclick="login()">Войти</button>
+
+        <p id="loginMessage"></p>
+    </section>
+
+    <section id="appSection" class="hidden">
+
+        <div class="top-bar">
+            <div>
+                Пользователь:
+                <strong id="currentUser"></strong>
+            </div>
+
+            <button onclick="logout()">Выйти</button>
+        </div>
+
+        <hr>
+
+        <h2>Создать заявку</h2>
+
+        <input id="ticketTitle" type="text" placeholder="Заголовок">
+
+        <textarea id="ticketDescription"
+                  placeholder="Описание проблемы"></textarea>
+
+        <select id="ticketCategory"></select>
+
+        <button onclick="createTicket()">Создать заявку</button>
+
+        <p id="createMessage"></p>
+
+        <hr>
+
+        <h2>Список заявок</h2>
+
+        <div class="filters">
+            <select id="statusFilter">
+                <option value="">Все статусы</option>
+                <option value="new">Новая</option>
+                <option value="in_progress">В работе</option>
+                <option value="closed">Закрыта</option>
+            </select>
+
+            <select id="categoryFilter">
+                <option value="">Все категории</option>
+            </select>
+
+            <button onclick="loadTickets()">Применить фильтр</button>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Заголовок</th>
+                <th>Статус</th>
+                <th>Категория</th>
+                <th>Пользователь</th>
+                <th>Комментарии</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody id="ticketsBody"></tbody>
+        </table>
+
+        <div class="pagination">
+            <button onclick="previousPage()">Назад</button>
+
+            <span id="pageInfo"></span>
+
+            <button onclick="nextPage()">Вперёд</button>
+        </div>
+
+        <hr>
+
+        <h2>Сводка</h2>
+
+        <button onclick="loadSummary()">Обновить сводку</button>
+
+        <div id="summary"></div>
+
+        <hr>
+
+        <section id="ticketCard" class="hidden">
+            <h2>Карточка заявки</h2>
+
+            <div id="ticketDetails"></div>
+        </section>
+
+    </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

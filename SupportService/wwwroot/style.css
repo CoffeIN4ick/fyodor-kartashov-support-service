@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+input,
+textarea,
+select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button {
+    padding: 9px 15px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filters select {
+    width: auto;
+    min-width: 180px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 9px;
+    text-align: left;
+}
+
+th {
+    background: #eeeeee;
+}
+
+.pagination {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.summary-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.ticket-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.comment {
+    background: #f1f1f1;
+    padding: 10px;
+    margin: 8px 0;
+}
