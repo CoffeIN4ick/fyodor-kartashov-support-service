@@ -39,3 +39,7 @@ cookies.txt
 # OS files
 Thumbs.db
 .DS_Store
+
+# Profiling artifacts
+load/results/*.nettrace
+load/results/*.speedscope.json

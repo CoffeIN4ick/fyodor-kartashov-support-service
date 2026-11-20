@@ -1,0 +1,226 @@
+{
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "setup": {
+                "name": "setup",
+                "path": "::setup",
+                "id": "5c0f8025f7e0b6654089e5b00e950f1a",
+                "groups": {},
+                "checks": {
+                    "login demo = 200": {
+                        "id": "2ac788b5f4b7338fe0ff55ac90e6b73e",
+                        "passes": 1,
+                        "fails": 0,
+                        "name": "login demo = 200",
+                        "path": "::setup::login demo = 200"
+                    },
+                    "login employee = 200": {
+                        "name": "login employee = 200",
+                        "path": "::setup::login employee = 200",
+                        "id": "63aa68f213bb7c504de200c857358ec0",
+                        "passes": 1,
+                        "fails": 0
+                    }
+                }
+            }
+        },
+        "checks": {
+            "GET /api/me = 200": {
+                "passes": 169,
+                "fails": 2,
+                "name": "GET /api/me = 200",
+                "path": "::GET /api/me = 200",
+                "id": "9abfacfd6ce42a7974e0949e3f63e997"
+            },
+            "GET /api/categories = 200": {
+                "fails": 5,
+                "name": "GET /api/categories = 200",
+                "path": "::GET /api/categories = 200",
+                "id": "f13eb522aa05ea8a0188bba0df3969c8",
+                "passes": 144
+            },
+            "GET /api/tickets = 200": {
+                "path": "::GET /api/tickets = 200",
+                "id": "99cbbe9c3a3bf358b84f867c55d5b3ca",
+                "passes": 970,
+                "fails": 19,
+                "name": "GET /api/tickets = 200"
+            },
+            "GET /api/tickets/{id} = 200": {
+                "path": "::GET /api/tickets/{id} = 200",
+                "id": "1f31e27be776f565439b49b74c92c5fe",
+                "passes": 941,
+                "fails": 21,
+                "name": "GET /api/tickets/{id} = 200"
+            },
+            "PUT status = 200": {
+                "id": "4d72dc59d15f8ee59cfe280676b0b389",
+                "passes": 259,
+                "fails": 8,
+                "name": "PUT status = 200",
+                "path": "::PUT status = 200"
+            },
+            "POST /api/tickets = 201": {
+                "name": "POST /api/tickets = 201",
+                "path": "::POST /api/tickets = 201",
+                "id": "cd26f547e0b9ed30d6ca533a44586474",
+                "passes": 257,
+                "fails": 9
+            },
+            "POST comment = 201": {
+                "passes": 382,
+                "fails": 13,
+                "name": "POST comment = 201",
+                "path": "::POST comment = 201",
+                "id": "894aaea603af89fafbb5c766061495f2"
+            },
+            "GET /api/summary = 200": {
+                "id": "95b046a520abc63c5056313a3bd6ea43",
+                "passes": 75,
+                "fails": 3,
+                "name": "GET /api/summary = 200",
+                "path": "::GET /api/summary = 200"
+            }
+        }
+    },
+    "metrics": {
+        "vus": {
+            "value": 2,
+            "min": 2,
+            "max": 640
+        },
+        "http_req_waiting": {
+            "max": 16951.2619,
+            "p(90)": 6354.905460000001,
+            "p(95)": 7162.88772,
+            "avg": 2773.3888376334326,
+            "min": 0,
+            "med": 1909.9927
+        },
+        "checks": {
+            "passes": 3199,
+            "fails": 80,
+            "value": 0.9756023177798109
+        },
+        "http_req_duration{load:true}": {
+            "med": 1912.7563,
+            "max": 16951.2619,
+            "p(90)": 6355.342720000001,
+            "p(95)": 7163.374339999999,
+            "avg": 2775.179528623748,
+            "min": 0,
+            "thresholds": {
+                "p(95)<500": true
+            }
+        },
+        "iterations": {
+            "count": 3277,
+            "rate": 83.77824922607701
+        },
+        "http_req_failed": {
+            "passes": 80,
+            "fails": 3199,
+            "value": 0.024397682220189083
+        },
+        "iteration_duration": {
+            "avg": 2775.996252975289,
+            "min": 0,
+            "med": 1913.2864,
+            "max": 16951.2619,
+            "p(90)": 6355.94794,
+            "p(95)": 7163.374339999999
+        },
+        "dropped_iterations": {
+            "count": 564,
+            "rate": 14.418960196370898
+        },
+        "http_req_blocked": {
+            "p(90)": 1.0072200000000002,
+            "p(95)": 1.52003,
+            "avg": 0.3176527599878008,
+            "min": 0,
+            "med": 0,
+            "max": 30.9185
+        },
+        "data_received": {
+            "count": 8643807,
+            "rate": 220983.5267342414
+        },
+        "http_reqs": {
+            "count": 3279,
+            "rate": 83.82938029060315
+        },
+        "data_sent": {
+            "count": 2361494,
+            "rate": 60372.8510460438
+        },
+        "http_req_failed{load:true}": {
+            "passes": 80,
+            "fails": 3197,
+            "thresholds": {
+                "rate<0.01": true
+            },
+            "value": 0.024412572474824534
+        },
+        "http_req_connecting": {
+            "p(95)": 1.4383499999999998,
+            "avg": 0.2802738334858185,
+            "min": 0,
+            "med": 0,
+            "max": 30.2126,
+            "p(90)": 0.9763600000000026
+        },
+        "http_req_sending": {
+            "avg": 0.053132052455016766,
+            "min": 0,
+            "med": 0,
+            "max": 32.2524,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "vus_max": {
+            "max": 640,
+            "value": 640,
+            "min": 256
+        },
+        "http_req_duration": {
+            "med": 1909.9927,
+            "max": 16951.2619,
+            "p(90)": 6354.905460000001,
+            "p(95)": 7162.88772,
+            "avg": 2773.5528835925656,
+            "min": 0
+        },
+        "http_req_receiving": {
+            "med": 0,
+            "max": 10.1687,
+            "p(90)": 0.5087,
+            "p(95)": 0.8016299999999998,
+            "avg": 0.11091390667886544,
+            "min": 0
+        },
+        "http_req_duration{expected_response:true}": {
+            "med": 2042.5116,
+            "max": 16951.2619,
+            "p(90)": 6383.910900000001,
+            "p(95)": 7170.803889999999,
+            "avg": 2842.913380837769,
+            "min": 0
+        },
+        "http_req_tls_handshaking": {
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0
+        }
+    },
+    "setup_data": {
+        "demoCookie": "fyodor_kartashov_auth=CfDJ8Lb8om48oblKsOUfxY89B2uIWcMtj05cFS3J-wY7FMT8UxGiUehUj_Gcbqk6tVDKqHVHeMbqFKPLrSffCyXp__fV9W9etISZ8fhC2HVFm1MEbKrUnTpPn-5bou-blVMcfsLPe-BwJSHKFtjcMsVzAJFWgkJ6gUGEx4Ca-CNO9qPWFA4q6ouGXi3n283MW3-kG7sIASSogW8aErb4r-C_kw9CjMhaxReMS92lBESFzSNNNE7LuZUZVZ-MQOuqyWpsDYF2hq4Mj1B3NF15QE-MpZCin1MsnhbGoiI8CZGaKvRuF6XjRGrfReons1jcupGeCxyOQvg76Zi-QETTXM4HtH7uaBqkZ05db5b3JuCanJJHzAuHAzAbNF_GmBW7JBLf9hVOkhSL9-NpkLk3MfyLwgZruitfmYmDyl6laoJ2XNSoml9osfVEINvlXvUFS73uIyD8dSjD7PQQjOdUtnusFScYBwNcNxsfFGAOh4h5lDaGpLoIexow42ynxn99TndfYzkx2r5wRMYi0MYAdQDtjow6bzB5sHzCXFqj6qJW3Kgo",
+        "employeeCookie": "fyodor_kartashov_auth=CfDJ8Lb8om48oblKsOUfxY89B2seP0SvoqPvZg3vY81P4YFPrqhCL2GSGRp_kq5JFyKo-uZnOqGx7OBdh0SVl-GzEp1_sD70mDtA-FMFEOXnlPtKyZ43q_tuANQe8M6nIu-ffBqEnYB_7WQXZfdq4Q_3WKWzT_eN4zB2fxUfqL_Kv21eLBMzY_wvl-LpTP4GIuH2Yg2uHQaEbi6rId87dwKuGrSOyKEPI3TCZaFWyJbhhCV_UMLopKhnFX2xogfo22d6h9TZOPlQTQtKJDgFXJcgxowG6tTeN-Du_lheWOHfB2bjbR5iz0sYyI37aJMz4Mb0_RPv4xynaQUXngLXlPmABTLgYDm4vguX626snRAyGHSVzsrnn2etoLsmG13gD3Z3tyn-sHdRhQGGUUrwALnTacyWVcr-Aw3NU3DmJdmwpnJqetVh3b55Sm1l08__VLrL1eaFYIue2WVnOix66a1gBGHrnxba7CXhpCO3KV0cC01ARyNB9Oj5AbvOr1ZS8EOmcX7SZH2VuFsig4AhMdRLuSM"
+    }
+}
